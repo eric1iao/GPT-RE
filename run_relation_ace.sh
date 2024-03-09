@@ -1,4 +1,4 @@
-python3 gpt3_relation.py \
+python gpt3_relation.py \
     --task ace05 \
     --model text-davinci-003 \
     --num_test 2442 \

@@ -1,0 +1,1 @@
+./results/knn_ace05_results/test=2442_knn=10_reverse=False_nona=False_var=False_0_0_seed=0_text-davinci-003_randomlabel=False_fixedex=False_fixedtest=True_Reason=False_Verbalize=False_Entityinfo=True_structure=0_useft=0_selferror=0_usedev=0_discri=0_0
