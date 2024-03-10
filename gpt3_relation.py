@@ -801,12 +801,13 @@ def run(reltoid, idtoprompt, store_path, args):
 
             knn_model = SimCSE("princeton-nlp/sup-simcse-roberta-large")
             # knn_model = SimCSE("princeton-nlp/sup-simcse-bert-base-uncased")
-            knn_model.build_index(train_sentences, device="cpu")
+            knn_model.build_index(train_sentences, device="cuda")
         else:
             train_dict = {instance(x).lm_mask: x for x in train_list}
             train_sentences = [instance(x).lm_mask for x in train_list]
 
             res = faiss.StandardGpuResources()
+            print(faiss.get_num_gpus())
 
             index_flat = faiss.IndexFlatL2(1024)
             gpu_index_flat = faiss.index_cpu_to_gpu(res, 0, index_flat)

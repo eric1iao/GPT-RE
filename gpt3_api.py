@@ -2,7 +2,7 @@ from typing import List
 import openai
 import os
 
-openai.api_key = "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"
+openai.api_key = ""
 
 
 class Demo(object):
@@ -45,7 +45,7 @@ class Demo(object):
 
 def run(prompt_list):
     demo = Demo(
-        engine="kunlp-text-davinci-002",  # text-davinci-002: best, text-ada-001: lowest price
+        engine="davinci-002",  # text-davinci-002: best, text-ada-001: lowest price
         temperature=0,  # control randomness: lowring results in less random completion (0 ~ 1.0)
         max_tokens=8,  # max number of tokens to generate (1 ~ 4,000)
         top_p=1,  # control diversity (0 ~ 1.0)
